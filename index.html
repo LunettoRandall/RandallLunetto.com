@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom of Thought</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id='container'></div>
+    <div class='info'>
+  <hgroup class='about'>
+    <h1>Atom of Thought...</h1>
+<h2><a href="http://randalllunetto.com/30BillionDots" class="hvr-grow">
+    Interact with 30 Billion Magnetic Dots</a></h2>
+  </hgroup>
+</div>
+    <canvas id=c></canvas>
+    <!--
+    ALGORITHM:
+
+    structure:
+    - gen( x,y,z ):
+    	- create node at x,y,z // blue
+    	- append some children to list:
+    		- within a certain distance to parent
+    		- outside a certain distance from any node
+    		- within a global distance
+    	- if no children
+    		- don't append any
+    		- set as end node // green-ish
+
+    - gen( 0,0,0 ) // red
+    - while list has items
+    	- gen( position of first item )
+    	- remove first item
+
+
+    impulse behaviour:
+    - pick( node ):
+    	- if node is end node
+    		- pick( original node )
+    	- else
+    		- pick( random node from node children )
+
+    - pick( original node)
+
+    -->
+    <script src="logic.js" charset="utf-8"></script>
+
+  </body>
+</html>
+
